@@ -1,0 +1,36 @@
+.footer {
+  height: 50px;
+  background-color: $dark-color;
+  opacity: 0.9;
+  color: white;
+
+  &__flex-container {
+    max-width: 1530px;
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__h4 {
+    flex: 1 1 20rem;
+    font-size: 1.7rem;
+    font-family: $Serif;
+    font-weight: normal;
+  }
+
+  &__ul {
+    list-style: none;
+    display: flex;
+    flex: 1 1 20rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    height: 30px;
+    width: auto;
+  }
+}

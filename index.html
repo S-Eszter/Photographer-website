@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ez itt fontos lesz-->
+    <meta name="description" content="?" />
+    <meta name="robots" content="index,follow" />
+    <title>Mészáros Eszter Fotográfus</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway&family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css"
+      integrity="sha512-QN7X/bUbbeel9bbq6JVNJXk1Zowt+n+QPN+DjhEmTa4TdL1YPCsCey5JrvfRW8xp28LDYgGG/waNVdrhwMQmVQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./imageshow.js"></script>
+    <script defer src="./mobile-nav.js"></script>
+  </head>
+
+  <body>
+    <!--hogy a logora kattintva felülre kerüljünk-->
+    <div id="top"></div>
+
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-mobile">
+          <a class="nav__logo" href="#top"><img src="./images/Mészáros-Eszter-logo.svg" alt="Mészáros Eszter Fotográfus"/></a>
+          <div class="hamburger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+        </div>
+        
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#index-gallery-nav">Galériák</a></li>
+          <li class="nav__item"><a href="#index-about-nav">Rólam</a></li>
+          <li class="nav__item"><a href="#index-blog-nav">Blog</a></li>
+          <li class="nav__item"><a href="#index-contact-nav">Kapcsolat</a></li>
+        </ul>
+      </nav>
+      <!-- ez nem biztos, hogy lesz
+      <nav class="nav nav--gallery">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--gallery"><a href="#">Portré</a></li>
+          <li class="nav__item nav__item--gallery"><a href="#">Család</a></li>
+          <li class="nav__item nav__item--gallery">
+            <a href="#">Fekete-fehér</a>
+          </li>
+          <li class="nav__item nav__item--gallery"><a href="#">Utazás</a></li>
+        </ul>
+      </nav>
+      -->
+    </header>
+
+    <main class="index-main">
+
+      <section class="index-hero" id="index-hero">
+
+        <div class="index-hero__flex-container">
+
+          <div class="index-hero__intro">
+            <h1>Mészáros Eszter</h1>
+            <h2>FOTOGRÁFUS</h2>
+            <p>
+              Megmutatom a hétköznapok felülmúlhatatlan szépségét.
+            </p>
+            <div>
+              <a class="button button--dark" href="#index-gallery-nav">Galériák</a>
+              <a class="button button--light" href="#index-contact-nav">Kapcsolat</a>
+            </div>
+          </div>
+
+          <!-- carousel -->
+          <div class="carousel">
+
+            <div class="carousel__img-wrapper">
+              <!-- nagyon fontos, hogy a betöltött kép mérete ne legyen kisebb a helyénél!!!
+              nem fogja széthúzni, hogy kitöltse -->
+              <img class="carousel__image current-image" 
+                  srcset="./images/fooldal_320x213_001.jpg 320w,
+                          ./images/fooldal_640x426_001.jpg 640w,
+                          ./images/fooldal_990x660_001.jpg 990w"
+                  sizes="(max-width: 320px) 320px,
+                        (max-width: 640px) 640px,
+                        990px"
+                  src="./images/fooldal_990x660_001.jpg"
+                  alt="családi fotó">
+
+              <img class="carousel__image" 
+                  srcset="./images/fooldal_320x213_002.jpg 320w,
+                          ./images/fooldal_640x426_002.jpg 640w,
+                          ./images/fooldal_990x660_002.jpg 990w"
+                  sizes="(max-width: 320px) 320px,
+                        (max-width: 640px) 640px,
+                        990px"
+                  src="./images/fooldal_990x660_002.jpg"
+                  alt="keresztelő">
+
+              <img class="carousel__image" 
+                  srcset="./images/fooldal_320x213_003.jpg 320w,
+                          ./images/fooldal_640x426_003.jpg 640w,
+                          ./images/fooldal_990x660_003.jpg 990w"
+                  sizes="(max-width: 320px) 320px,
+                        (max-width: 640px) 640px,
+                        990px"
+                  src="./images/fooldal_990x660_003.jpg"
+                  alt="kislány">
+
+              <img class="carousel__image" 
+                  srcset="./images/fooldal_320x213_004.jpg 320w,
+                          ./images/fooldal_640x426_004.jpg 640w,
+                          ./images/fooldal_990x660_004.jpg 990w"
+                  sizes="(max-width: 320px) 320px,
+                        (max-width: 640px) 640px,
+                        990px"
+                  src="./images/fooldal_990x660_004.jpg"
+                  alt="esküvő">
+
+              <img class="carousel__image" 
+                  srcset="./images/fooldal_320x213_005.jpg 320w,
+                          ./images/fooldal_640x426_005.jpg 640w,
+                          ./images/fooldal_990x660_005.jpg 990w"
+                  sizes="(max-width: 320px) 320px,
+                        (max-width: 640px) 640px,
+                        990px"
+                  src="./images/fooldal_990x660_005.jpg"
+                  alt="apa fiaival">
+            
+            </div>
+
+            <div class="carousel__nav">
+              <button class="carousel__indicator current-image"></button>
+              <button class="carousel__indicator"></button>
+              <button class="carousel__indicator"></button>
+              <button class="carousel__indicator"></button>
+              <button class="carousel__indicator"></button>
+            </div>
+            
+          </div>
+        </div>
+        <div id="index-gallery-nav"></div>
+      </section>
+
+      <section class="index-gallery" id="index-gallery">
+        <h3>Galériák</h3>
+        <div class="index-gallery__grid-container">
+
+          <div class="index-gallery__item index-gallery__img1">
+            <div class="index-gallery__img1__text index-gallery__text"><a href="./gallery-family.html">Család</a></div>
+            <img src="./images/csalad_533x800_001.jpg" alt="" />
+          </div>
+          
+          
+          <div class="index-gallery__item index-gallery__img2">
+            <div class="index-gallery__img2__text index-gallery__text"><a href="./gallery-travel.html">Utazás</a></div>
+            <img src="./images/utazas_640x426_001.jpg" alt="" />  
+          </div>
+
+         
+          <div class="index-gallery__item index-gallery__img3">
+            <div class="index-gallery__img3__text index-gallery__text"><a href="./gallery-portrait.html">Portré</a></div>
+            <img src="./images/portre_533x800_001.jpg" alt="" />  
+          </div>
+
+          <div class="index-gallery__item index-gallery__img4">
+            <div class="index-gallery__img4__text index-gallery__text"><a href="./gallery-wedding.html">Esküvő</a></div>
+            <img src="./images/eskuvo_640x426_001.jpg" alt="" />
+          </div>
+
+          
+          
+          <div class="index-gallery__item index-gallery__img5">
+            <div class="index-gallery__img5__text index-gallery__text"><a href="./gallery-bw.html">Fekete-fehér</a></div>
+            <img src="./images/ff_533x800_001.jpg" alt="" />
+          </div>
+        </div>
+        <div id="index-about-nav"></div>
+      </section>
+    
+
+      <section class="index-about" id="index-about">
+        <div class="index-about__flex-container">
+          <div class="index-about__img-wrapper">
+            <img class="index-about__img" 
+                srcset="./images/en_320x213_002.jpg 320w,
+                        ./images/en_640x426_002.jpg 640w,
+                        ./images/en_990x660_002.jpg 990w"
+                sizes="(max-width: 320px) 320px,
+                      (max-width: 640px) 640px,
+                      990px"
+                src="./images/en_990x660_002.jpg"
+                alt="Mészáros Eszter fotós">
+
+          </div>
+          <div class="index-about__intro">
+            <h3>Rólam</h3>
+            <p>Ha csak számomra fontos szavakat írhatnék bemutatkozás képpen az valahogy így festene: 
+              erdő, érzelmek, reggeli fény, hűs árnyék, falevelek, színes ceruzák, gyerekek, nevetés, 
+              család, könny, mesemondás, geológia, habos sütemény, zene, főzés, ölelés, tűzrakás, bizalom, 
+              lélekbúvárkodás, kutya, összekulcsolt kezek.</p>
+            <p>De minden szó mögött azt a tartalmat látjuk, ami a saját Életünk regényes lapjain szerepel. 
+              Ki milyen regényt ír? Szerencsés vagyok, hogy fotóim által megjeleníthetem belső regényem színeit, 
+              érzelmeit, mozdulatait, mélységeit vagy éppen játékosságát. Adni tudok belőle azoknak, akik ugyanebben 
+              a hangulatban látják a saját életüket, s ezáltal beszélünk egy nyelvet ismeretlenül is :-)</p>
+            <a class="button button--dark" href="./about.html">Részletek</a>
+          </div>
+        </div>
+        <div id="index-blog-nav"></div>
+      </section>
+
+      <section class="index-blog">
+        <div class="index-blog__flex-container">
+          <div class="index-blog__intro">
+            <h3>Blog</h3>
+            <p>
+              A blog célja, hogy megosszam a számomra kedves fotóimat. Néha a fotózás történetéről, 
+              olykor a saját világlátásomról, máskor pedig a fotózás technikai hátteréről mesélek a posztokban. 
+              Az évek során egyértelművé vált számomra, hogy bár csodálom és birtoklom a digitális technika 
+              nyújtotta lehetőségeket, előtérbe a valóságot helyezem. Ennek legfőbb oka, hogy páratlanul 
+              szépnek látom. Hiszek a mindennapi részletek időtálló, pótolhatatlan értékében. 
+            </p>
+            <a class="button button--dark" href="./blog.html"
+              >Tovább a blogra</a
+            >
+          </div>
+          <div class="index-blog__img-wrapper">
+
+            <img  class="index-blog__img" 
+                srcset="./images/blog_320x213_001.jpg 320w,
+                        ./images/blog_640x426_001.jpg 640w,
+                        ./images/blog_990x660_001.jpg 990w"
+                sizes="(max-width: 320px) 320px,
+                      (max-width: 640px) 640px,
+                      990px"
+                src="./images/blog_990x660_001.jpg"
+                alt="nő kutyával">
+
+          </div>
+        </div>
+        <div id="index-contact-nav"></div>
+      </section>
+
+      <section class="index-contact">
+
+        <div class="index-contact__flex-container">
+
+          <div class="index-contact__img-wrapper">
+
+            <img class="index-contact__img" 
+                srcset="./images/en_320x213_003.jpg 320w,
+                        ./images/en_640x426_003.jpg 640w,
+                        ./images/en_990x660_003.jpg 990w"
+                sizes="(max-width: 320px) 320px,
+                      (max-width: 640px) 640px,
+                      990px"
+                src="./images/en_990x660_003.jpg"
+                alt="Mészáros Eszter">
+
+          </div>
+
+          <div class="index-contact__text">
+
+            <div class="index-contact__info">
+              <h3>Elérhetőségeim</h3>
+              
+              <p class="index-contact__tel">+36 20 559 0118</p>
+              <p class="index-contact__email">eszter.meszaros@gmail.com</p>
+              
+              <div>
+                <img class="footer__img" src="./images/instagram-icon.png" alt="instagram-link"/>
+                <img class="footer__img" src="./images/facebook-icon.png" alt="facebook-link" />
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__flex-container">
+        <h4 class="footer__h4">Mészáros Eszter &copy; 2020</h4>
+        <ul class="footer__ul">
+          <li>
+            <a href="#index-contact-nav" 
+              ><img class="footer__img" src="./images/phone-icon.png" alt="telefonszám link"
+            /></a>
+          </li>
+          <li>
+            <a href="#index-contact-nav" 
+              ><img class="footer__img" src="./images/mail-icon.png" alt="e-mail cím link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/meszesz/" target="_blank"
+              ><img class="footer__img" src="./images/instagram-icon.png" alt="instagram-link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/eszter.meszaros81/" target="_blank"
+              ><img class="footer__img" src="./images/facebook-icon.png" alt="facebook-link"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

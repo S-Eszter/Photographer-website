@@ -1,0 +1,86 @@
+header {
+  background-color: $dark-color;
+  opacity: 0.9;
+  z-index: 2;
+  position: sticky;
+  top: 0px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  max-width: 1530px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+
+  &-mobile {
+    flex: 1 1 10rem;
+  }
+
+  &__logo {
+    color: white;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 10rem;
+  }
+
+  &__item {
+    list-style: none;
+    position: relative;
+
+    a {
+      font-size: 1.8rem;
+      padding-bottom: 1rem;
+      font-family: $Serif;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+  }
+
+  &__item:hover::before {
+    width: 100%;
+  }
+
+  &__item.open::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -0.4rem;
+    width: 100%;
+  }
+
+  // ez a subnav nem biztos, hogy megmarad
+  &--gallery {
+    min-height: 4vh;
+    width: 40%;
+    //ezt kell megváltoztatni flexre, hogy látszódjon
+    display: none;
+    flex-wrap: wrap;
+  }
+
+  &__item--gallery a {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+}

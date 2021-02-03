@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: opening 1s ease-in-out;
+}
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  border: none;
+  font-family: $Mono;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.button--dark {
+  background-color: $dark-color;
+  color: white;
+}
+
+.button--light {
+  color: $dark-color;
+  border: 0.1rem solid $dark-color;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-family: $Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  letter-spacing: 0.2rem;
+  color: $dark-color;
+}
+
+img {
+  display: block;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: $Sans;
+  text-align: left;
+  line-height: 3rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.non-scrollable {
+  overflow-y: hidden;
+}
+
+.opacity-null {
+  opacity: 0;
+}
+
+.opacity-one {
+  opacity: 1;
+}
